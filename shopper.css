@@ -60,6 +60,7 @@ body, body * {
 
 .logo-header h1 {
     margin: 10px 7px;
+    font-size: 23px;
 }
 
 p.describe {
