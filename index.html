@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Shopper!!!</title>
+    <link rel="stylesheet" href="shopper.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+<body>
+    
+    <div class="background">
+
+        <div class="wrapper">
+            <!-- Logo and Header/Title -->
+            <div class="logo-header">
+                <img src="assets/img/cart-shopping-list.svg" alt="cart shopping list logo">
+                <h1>Go Shopper!</h1>
+            </div>
+            <p class="describe">Your number 1 Indispensable Shopping List</p>
+            <!-- Search Bar -->
+            <form id="search-bar" class="search-bar">
+                <input type="text" name="search" id="search-item" placeholder="Search List. . .">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+
+            <div class="inner-wrapper">
+                <!-- Items list area, generated via javascript -->
+                <ul class="list"></ul>
+                <!-- Add to List Bar -->
+                <form id="input-bar" class="input-bar">
+                    <input type="text" name="input" id="input-item" placeholder="Add to List. . .">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </form>
+                <!-- To display Tips as User Guide... completed in JS -->
+                <div class="tips">
+                    <h2>Tips :</h2>
+                    <p class="tip"></p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="shopper.js"></script>
+</body>
+</html>

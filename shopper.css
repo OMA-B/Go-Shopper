@@ -1,0 +1,183 @@
+/* ----------- Default screen width == 455px ----------- */
+
+/* ----------- Variables ----------- */
+:root {
+    --background-color: #5A504A;
+    --primary-color: #FFEC98;
+    --secondary-color: #EE7464;
+    --other-color1: #465961;
+    --other-color2: #fff;
+    --other-color3: #000;
+    --display-font-size: 15px;
+    --text-font-size: 13px;
+}
+
+/* ----------- Reset ----------- */
+body, body * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Ubuntu, sans-serif;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(assets/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, var(--background-color)55%, var(--other-color1)) no-repeat;
+    position: absolute;
+    overflow: auto;
+}
+
+.wrapper {
+    width: 85%;
+    margin: 50px auto;
+    padding: 20px 0 5px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+/* ----------- Logo and Header/Title ----------- */
+.logo-header {
+    width: 210px;
+    height: 50px;
+    margin: 10px auto ;
+    background: var(--other-color2);
+    display: flex;
+    border-radius: 10px;
+}
+
+.logo-header img {
+    height: 40px;
+    margin: 5px;
+}
+
+.logo-header h1 {
+    margin: 10px 7px;
+}
+
+p.describe {
+    text-align: center;
+    color: var(--other-color2);
+    font-size: 2.8vw/*var(--display-font-size)*/;
+}
+
+/* ----------- Search Bar ----------- */
+.search-bar, .input-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-bar input, .input-bar input {
+    width: 55%;
+    height: 25px;
+    font-size: var(--display-font-size);
+    font-weight: 100;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar input:focus, .input-bar input:focus {
+    color: var(--secondary-color);
+}
+
+.fa-magnifying-glass, .fa-arrow-up {
+    font-size: var(--display-font-size);
+    color: var(--other-color2);
+    margin-left: -2px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.fa-magnifying-glass:hover, .fa-arrow-up:hover {
+    background: var(--other-color2);
+    color: var(--secondary-color);
+}
+
+/* ----------- Items list area, generated via javascript ----------- */
+.inner-wrapper {
+    width: 90%;
+    background: var(--primary-color);
+    margin: 30px auto;
+    padding: 20px 0 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+.list {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.item-wrapper {
+    background: var(--other-color2);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.item-wrapper .item-check {
+    margin-top: 5px;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.item-wrapper .item {
+    font-size: var(--text-font-size);
+    margin: 0px 10px 15px 10px;
+    cursor: pointer;
+}
+
+.item-wrapper .delete {
+    font-size: var(--text-font-size);
+    background: var(--secondary-color);
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.item-wrapper .delete:hover {
+    color: var(--primary-color);
+}
+
+/* ----------- Add to List Bar ----------- */
+.input-bar input {
+    width: 70%;
+}
+
+.fa-arrow-up {
+    color: var(--other-color3);
+    padding: 5px 10px;
+}
+/* ----------- The rest of Add to List Bar can be found in Search Bar ----------- */
+
+.tips {
+    width: 90%;
+    margin: auto;
+    padding: 10px 15px;
+    border-top: 2px solid var(--secondary-color);
+}
+
+.tips .tip {
+    background: var(--other-color2);
+    margin-top: 10px;
+    padding: 10px;
+    font-size: var(--text-font-size);
+    border-radius: 7px;
+}
