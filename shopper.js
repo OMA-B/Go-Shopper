@@ -108,7 +108,7 @@ add_to.addEventListener('click', () => {
     delete_btn.classList.add('fa-solid');
     delete_btn.classList.add('fa-trash-can');
 
-    const input_item = input_bar.querySelector('#input-item');    
+    const input_item = input_bar.querySelector('#input-item');
 
     if (input_item.value !== '') {   
         // appending
@@ -139,6 +139,13 @@ add_to.addEventListener('click', () => {
     delete_btn.addEventListener('click', () => {
         list.removeChild(delete_btn.parentElement);
     });
+});
+
+// adding focus to Add to List on page load
+const input_item = input_bar.querySelector('#input-item');
+
+window.addEventListener('load', () => {
+    input_item.focus();
 });
 
 // Implementing the Search Bar
