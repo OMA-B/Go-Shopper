@@ -182,3 +182,14 @@ p.describe {
     font-size: var(--text-font-size);
     border-radius: 7px;
 }
+
+/* Adding a fixed width for the wrapper at 800px and above */
+@media screen and (min-width: 800px) {
+    .wrapper {
+        width: 700px;
+    }
+
+    p.describe {
+        font-size: 20px;
+    }
+}
