@@ -4,7 +4,7 @@ const color = ['white', '#FFEC98', '#EE7464', '#5A504A'];
 let counter = 0;
 
 const logo_background = () => {
-    if (counter > color.length) {
+    if (counter === color.length) {
         counter = 0;
     }
     logo_header.style.background = color[counter];
@@ -108,7 +108,7 @@ add_to.addEventListener('click', () => {
     delete_btn.classList.add('fa-solid');
     delete_btn.classList.add('fa-trash-can');
 
-    const input_item = input_bar.querySelector('#input-item');
+    const input_item = input_bar.querySelector('#input-item');    
 
     if (input_item.value !== '') {   
         // appending
@@ -170,11 +170,10 @@ const how_to_use = ["For a long list, kindly use the 'Search List...' for quick 
 let count = 0;
 
 const user_guide = () => {
-    if (count > how_to_use.length) {
+    if (count === how_to_use.length) {
         count = 0;
     }
     tip.textContent = how_to_use[count];
-    tip.style.transition = '1s';
     count++;
 };
 
