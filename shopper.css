@@ -66,7 +66,8 @@ body, body * {
 p.describe {
     text-align: center;
     color: var(--other-color2);
-    font-size: 2.8vw/*var(--display-font-size)*/;
+    font-size: 2.8vw;
+    margin-bottom: 40px;
 }
 
 /* ----------- Search Bar ----------- */
@@ -77,7 +78,7 @@ p.describe {
 
 .search-bar input, .input-bar input {
     width: 55%;
-    height: 25px;
+    height: 40px;
     font-size: var(--display-font-size);
     font-weight: 100;
     padding: 10px;
@@ -93,7 +94,7 @@ p.describe {
     font-size: var(--display-font-size);
     color: var(--other-color2);
     margin-left: -2px;
-    padding: 5px;
+    padding: 12px 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
