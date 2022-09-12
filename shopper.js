@@ -20,7 +20,8 @@ setInterval(logo_background, 3000);
 const input_bar = document.forms['input-bar'];
 const list = document.querySelector('.list');
 
-input_bar.addEventListener('submit', (e) => {
+// Implementing DRY Method
+const create_item = (e) => {
     e.preventDefault();    
 
     // Creating Elements to append in the list
@@ -78,72 +79,16 @@ input_bar.addEventListener('submit', (e) => {
     delete_btn.addEventListener('click', () => {
         list.removeChild(delete_btn.parentElement);
     });
-});
+}
+
+input_bar.addEventListener('submit', create_item);
 
 // Implementing the Arrow up button === add_to
 const add_to = document.querySelector('.fa-arrow-up');
-
-add_to.addEventListener('click', () => {
-    // Creating Elements to append in the list
-    const item_wrapper = document.createElement('li');
-    item_wrapper.classList.add('item-wrapper');
-
-    const item_check = document.createElement('span');
-    item_check.classList.add('item-check');
-
-    const shopped = document.createElement('span');
-    shopped.classList.add('fa-solid');
-    shopped.classList.add('fa-cart-arrow-down');
-    shopped.style.display = 'none';
-
-    const cart = document.createElement('span');
-    cart.classList.add('fa-solid');
-    cart.classList.add('fa-cart-shopping');
-
-    const item = document.createElement('span');
-    item.classList.add('item');
-
-    const delete_btn = document.createElement('span');
-    delete_btn.classList.add('delete');
-    delete_btn.classList.add('fa-solid');
-    delete_btn.classList.add('fa-trash-can');
-
-    const input_item = input_bar.querySelector('#input-item');
-
-    if (input_item.value !== '') {   
-        // appending
-        item.textContent = input_item.value;
-        item_check.appendChild(shopped);
-        item_check.appendChild(cart);
-        item_check.appendChild(item);
-        item_wrapper.appendChild(item_check);
-        item_wrapper.appendChild(delete_btn);
-        list.appendChild(item_wrapper);
-        input_item.value = '';
-    }
-
-    // checking items off the list
-    item.addEventListener('click', () => {
-        if (item.className === 'item') {
-            item.classList.toggle('checked');
-            cart.style.display = 'none';
-            shopped.style.display = 'inline-block';
-        } else {
-            item.classList.toggle('checked');
-            cart.style.display = 'inline-block';
-            shopped.style.display = 'none';
-        }
-    });
-
-    // deleting items off the list
-    delete_btn.addEventListener('click', () => {
-        list.removeChild(delete_btn.parentElement);
-    });
-});
+add_to.addEventListener('click', create_item);
 
 // adding focus to Add to List on page load
 const input_item = input_bar.querySelector('#input-item');
-
 window.addEventListener('load', () => {
     input_item.focus();
 });
@@ -151,7 +96,7 @@ window.addEventListener('load', () => {
 // Implementing the Search Bar
 const search_bar = document.forms['search-bar'];
 
-search_bar.addEventListener('keyup', (e) => {
+search_bar.addEventListener('keyup', () => {
     search_bar.addEventListener('submit', (e) => {
         e.preventDefault();
     });
